@@ -16,7 +16,7 @@ class PlaybillsController < ApplicationController
   # POST /playbills
   def create
     @playbill = Playbill.new(playbill_params)
-
+    # binding.pry
     if @playbill.save
       render json: @playbill, status: :created, location: @playbill
     else
@@ -35,6 +35,7 @@ class PlaybillsController < ApplicationController
 
   # DELETE /playbills/1
   def destroy
+    # binding.pry
     @playbill.destroy
   end
 
