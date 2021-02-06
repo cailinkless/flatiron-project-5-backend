@@ -1,4 +1,4 @@
 class Playbill < ApplicationRecord
-    has_many :credits
-    has_many :showtimes
+    has_many :credits, :dependent => :destroy
+    has_many :showtimes, :dependent => :destroy
 end
